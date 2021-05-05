@@ -27,8 +27,7 @@ function registrationNumbers(){
         // }
         message.innerHTML = factoryFunc.values().addMessage
         regDisplay.innerHTML = factoryFunc.values().display
-        regDisplay2.innerHTML = factoryFunc.values().display
-        
+
         counterDis.innerHTML = factoryFunc.values().counter
             
         setTimeout(function(){ message.innerHTML = "" }, 4000);
