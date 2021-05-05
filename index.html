@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="registration_numbers.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Numbers</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Registration Numbers</h1>
+    </div>
+
+    <div class="reg-name">
+        <h3>Please enter a registration number</h3>
+        <p>
+            Formats that are accepted :
+        </p>
+        <p>
+            CA 123-456
+        </p>
+        <p>
+            CY 12345
+        </p>
+        <p>
+            CF-123-456
+        </p>
+    </div>
+
+    <div class="errorMessage">
+        <span class="errorOutputMessage"></span>
+    </div>
+
+    <div class="text-box">
+        <label for="reg_num">Registration Number: </label>
+            <input class="textNum" type="text" placeholder="enter a registration"/>
+            <span><label for="count">Count:<span class="counterValue"></span> </label></span>
+    </div>
+
+    <div class="message">
+        <span class="outputMessage"></span>
+    </div>
+
+    <div class="buttons">
+        <div class="add-button">
+            <button class="add" type="button" name="button" >Add</button>
+        </div>
+    
+        <div class="clear-button">
+            <button class="clear" type="button" name="clear-count-button" >Clear count</button>
+        </div>
+    </div>
+
+    <div class="radio-buttons">
+        <p>Please select a town:</p>
+        <form>
+            <label class="radio-inline">
+                <input class="radio-btn" type="radio" name="town" value="cape-town" checked>Cape Town
+            </label>
+            <label class="radio-inline">
+                <input class="radio-btn" type="radio" name="town" value="stellenbosch">Stellenbosch
+            </label>
+            <label class="radio-inline">
+                <input class="radio-btn" type="radio" name="town" value="bellville">Bellville
+            </label>
+            <label class="radio-inline">
+                <input class="radio-btn" type="radio" name="town" value="paarl">Paarl
+            </label>
+            <label class="radio-inline">
+                <input class="radio-btn" type="radio" name="town" value="all">All
+            </label>
+        </form>
+    </div>
+
+    <div class="reg-display">
+        <span class="reg1"></span>
+        <span class="reg2"></span>
+        <span class="reg3"></span>
+    </div>
+
+    <script src="factory-function/registration_factory.js"></script>
+    <script src="javascript/registration_numbers.js"></script>
+
+    
+</body>
+</html>
