@@ -5,65 +5,102 @@ function registrations(){
     var regOb = {}
     var regCount = 0
     var mess = ""
-    var alreadyAddedError = "This registration number has already been added!"
+    var alreadyAddedError = ""
     var addedMessage = ""
     var clearMessage = "All registrations have been cleared!"
     var typeMessage = ""
     var empty = "Please enter a registration number"
-    var tooMany = "Please enter the correct amount of characters!"
+    var tooMany = ""
 
     function getRegNumber(reg){
         regNum = reg.toUpperCase()
         console.log(regNum)
-        // regList.push(regNum)
-        //         regCount++
-        //         console.log(regList)
-        //         console.log(regCount)
+
+    }
+
+    function getArr(){
+        return regList
     }
 
     function addRegNumber(){
-        console.log(regNum)
+       // console.log(regNum)
+        addedMessage = ""
 
         if (!regList.includes(regNum)){
-            console.log('South')
+            //console.log('South')
             if(/[A-Z]{2}\s[0-9]{3}\-[0-9]{3}/g.test(regNum) || /[A-Z]{2}\s[0-9]{5}/g.test(regNum) || /[A-Z]{2}\-[0-9]{3}\-[0-9]{3}/g.test(regNum)){
-                regList.push(regNum)
-                regCount++
-                addedMessage = "Your registration number has been added"
-            } else{
-                addedMessage = "does not match!"
+                //console.log('north')
+                   if(regNum.length >8 && regNum.length <=10){
+                       // console.log('numbers')
+                        regList.push(regNum)
+                        regCount++
+                        addedMessage = "Your registration number has been added"
+                        //console.log("try")
+                    } 
+                    else{
+                    addedMessage = "not enough characters more or less!"
+                    }
+                    regNum = ''
+            } 
+            else if(!/[A-Z]{2}\s[0-9]{3}\-[0-9]{3}/g.test(regNum) || !/[A-Z]{2}\s[0-9]{5}/g.test(regNum) || !/[A-Z]{2}\-[0-9]{3}\-[0-9]{3}/g.test(regNum)){
+                addedMessage = "does not match check the format!"
             }
 
-            console.log(regList)
+            // console.log(regList)
             
         }
-        else{
-            addedMessage = "This registration has already been added!"
+        else if(regList.includes(regNum)){
+            alreadyAddedError = "This registration has already been added!"
         }
 
-        // else{
-
-        //     if(regNum.match(/[A-Z]{2}\s[0-9]{3}\-[0-9]{3}/g) || regNum.match(/[A-Z]{2}\s[0-9]{5}/g) || regNum.match(/[A-Z]{2}\-[0-9]{3}\-[0-9]{3}/g)){
-        //         regList.push(regNum)
-        //         regCount++
-        //         console.log(regList)
-        //         console.log(regCount)
-        //         addedMessage = "Your registration number has been added"
-        //     }
-            
-        //     else if(!regNum.match(/[A-Z]{2}\s[0-9]{3}\-[0-9]{3}/g) || !regNum.match(/[A-Z]{2}\s[0-9]{5}/g) || !regNum.match(/[A-Z]{2}\-[0-9]{3}\-[0-9]{3}/g)){
-        //         typeMessage = "Invalid type of registration"
-        //     }
-            
-        // }
 
     }
+
+    function filterRegistration(radioCheck){
+
+        if(radioCheck == "cape-town"){
+            for(i=0; i<regList.length; i++){
+                if(regList[i].startsWith("CA")){
+
+                }
+            }
+        }
+        if(radioCheck == "stellenbosch"){
+            for(i=0; i<regList.length; i++){
+                if(regList[i].startsWith("CL")){
+
+                }
+            }
+        }
+        if(radioCheck == "bellville"){
+            for(i=0; i<regList.length; i++){
+                if(regList[i].startsWith("CF")){
+
+                }
+            }
+        }
+        if(radioCheck == "paarl"){
+            for(i=0; i<regList.length; i++){
+                if(regList[i].startsWith("CJ")){
+
+                }
+            }
+        }
+        if(radioCheck == "all"){
+            for(i=0; i<regList.length; i++){
+                
+            }
+        }
+
+    }
+
+    function clearTheCountButton(){
+        regCount = 0
+        regList = []
+        //localStorage.clear()
+    }
     
-    // function already(){
-    //     if (regOb.hasOwnProperty(regNum)){
-    //         return alreadyAddedError
-    //     }
-    // }
+    
 
     function values(){
         return {
@@ -81,8 +118,10 @@ function registrations(){
 
     return{
         values,
-        // already,
         getRegNumber,
         addRegNumber,
+        getArr,
+        clearTheCountButton,
+        filterRegistration,
     }
 }

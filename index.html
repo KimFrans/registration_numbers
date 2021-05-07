@@ -22,7 +22,7 @@
             CA 123-456
         </p>
         <p>
-            CY 12345
+            CY 123456
         </p>
         <p>
             CF-123-456
@@ -36,21 +36,17 @@
     <div class="text-box">
         <label for="reg_num">Registration Number: </label>
             <input class="textNum" type="text" placeholder="enter a registration"/>
-            <span><label for="count">Count:<span class="counterValue"></span> </label></span>
+            <!-- <span><label for="count">Count:<span class="counterValue"></span> </label></span> -->
     </div>
 
     <div class="message">
         <span class="outputMessage"></span>
     </div>
 
-    <div class="buttons">
-        <div class="add-button">
+    <div class="buttons">    
             <button class="add" type="button" name="button" >Add</button>
-        </div>
     
-        <div class="clear-button">
-            <button class="clear" type="button" name="clear-count-button" >Clear count</button>
-        </div>
+            <!-- <button class="clear" type="button" name="clear-count-button" >Clear count</button> -->
     </div>
 
     <div class="radio-buttons">
@@ -74,10 +70,10 @@
         </form>
     </div>
 
-    <div class="reg-display">
-        <span class="reg1"></span>
-        <span class="reg2"></span>
-        <span class="reg3"></span>
+    <div id="reg-display">
+        <ul id="regs">
+           
+        </ul>
     </div>
 
     <script src="factory-function/registration_factory.js"></script>

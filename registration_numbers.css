@@ -16,10 +16,11 @@ body{
     text-align: center;
 }
 
-.errorMessage .errorOutputMessage{
+.errorMessage{
     margin-left: 35%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: red;
 }
 
 .text-box{
@@ -27,65 +28,74 @@ body{
     font-size: 20px;
 }
 
-.message .outputMessage{
-    margin-left: 25%;
+.message {
+    margin-left: 30%;
+    padding-top: 1%;
+    color: rgb(9, 0, 128)
 }
 
 .radio-buttons{
-    margin-left: 18%;
+    margin-left: 12%;
 }
 
 .radio-buttons .radio-inline{
-    padding-right: 10%;
+    padding-right: 5%;
     font-size: 20px;
     font-family: fantasy;
     font-style: italic;
     font-weight: bold;
 }
 
-.buttons .add-button .add{
+.buttons .add{
     border-radius: 20px;
     margin-left: 30%;
     font-size: 20px;
+    margin-top: 2%;
 }
 
-.buttons .add-button .add:hover{
+
+.buttons .add:hover{
     background-color: red;
     color: wheat;
 }
 
-.buttons .clear-button .clear{
+.buttons .clear{
+    margin-left: 5%;
     border-radius: 20px;
-    float: right;
     margin-right: 25%;
     font-size: 20px;
 }
 
-.buttons .clear-button .clear:hover{
+.buttons .clear:hover{
     background-color: red;
     color: white;
 }
-.reg-display{
-    display: inline;
+
+#reg-display li{
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    display: inline-block;
+    border-radius: 15px;
+    border-color: black;
+    border: solid black;
+    color: black;
+    background-color: yellow;
+    font-size: 20px;
+    list-style: none;
+    margin-right: 2%;
 }
 
-.reg-display .reg1{
+/* #reg-display {
+    
+    display: inline-block;
+} */
+
+/* li{
     border-radius: 15px;
     border-color: black;
     color: black;
     background-color: grey;
-}
-
-.reg-display .reg2{
-    border-radius: 15px;
-    border-color: black;
-    color: black;
-    background-color: grey;
-}
-
-.reg-display .reg3{
-    border-radius: 15px;
-    border-color: black;
-    color: black;
-    background-color: grey;
-}
+    font-size: 10px;
+} */
