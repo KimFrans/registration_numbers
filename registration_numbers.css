@@ -1,7 +1,7 @@
 .header{
     background-image: url(./images/final-back.png);
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
     text-align: center;
     color: green;
     font-weight: bold;
@@ -46,6 +46,10 @@ body{
     font-weight: bold;
 }
 
+.buttons{
+    display: inline;
+}
+
 .buttons .add{
     border-radius: 20px;
     margin-left: 30%;
@@ -59,10 +63,23 @@ body{
     color: wheat;
 }
 
+.display-button .show{
+    margin-top: 2%;
+    margin-left: 25%;
+    border-radius: 20px;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+.display-button .show:hover{
+    background-color: red;
+    color: white;
+}
+
 .buttons .clear{
     margin-left: 5%;
     border-radius: 20px;
-    margin-right: 25%;
+    margin-right: 10%;
     font-size: 20px;
 }
 
