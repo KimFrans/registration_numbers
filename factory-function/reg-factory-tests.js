@@ -4,8 +4,6 @@ describe('Checking the registration number', function(){
 
         regTest.getRegNumber("ca 123456")
         regTest.addRegNumber("ca 123456")
-        // regTest.getArr()
-
 
         assert.equal("Your registration number has been added", regTest.values().addMessage)
         assert.equal(false, regTest.addRegNumber())
@@ -17,8 +15,6 @@ describe('Checking the registration number', function(){
 
         regTest.getRegNumber("ca 789-9632")
         regTest.addRegNumber("ca 789-9632")
-        // regTest.getArr()
-
 
         assert.equal("not enough characters more or less!", regTest.values().addMessage)
         assert.equal(false, regTest.addRegNumber())
@@ -30,8 +26,6 @@ describe('Checking the registration number', function(){
 
         regTest.getRegNumber("ca 741852963")
         regTest.addRegNumber("ca 741852963")
-        // regTest.getArr()
-
 
         assert.equal("not enough characters more or less!", regTest.values().addMessage)
         assert.equal(false, regTest.addRegNumber())
@@ -45,8 +39,6 @@ describe('Checking the registration number', function(){
         regTest.addRegNumber("ca 123456")
         regTest.getRegNumber("ca 123456")
         regTest.addRegNumber("ca 123456")
-        // regTest.getArr()
-
 
         assert.equal("This registration has already been added!", regTest.values().addMessage)
         assert.equal(false, regTest.addRegNumber())
@@ -65,7 +57,6 @@ describe('Error Messages', function(){
         regTest.addRegNumber("ca 123456")
         regTest.getRegNumber("ca 123456")
         regTest.addRegNumber("ca 123456")
-        // regTest.getArr()
 
 
         assert.equal("This registration has already been added!", regTest.values().addMessage)
@@ -78,8 +69,6 @@ describe('Error Messages', function(){
 
         regTest.getRegNumber("ca 123-96325")
         regTest.addRegNumber("ca 123-96325")
-        // regTest.getArr()
-
 
         assert.equal("not enough characters more or less!", regTest.values().addMessage)
         assert.equal(false, regTest.addRegNumber())

@@ -45,20 +45,15 @@ function registrations(){
     }
 
     function addRegNumber(){
-       // console.log(regNum)
         addedMessage = ""
 
         if (!regList.includes(regNum)){
-            //console.log('South')
             if(/[A-Z]{2}\s[0-9]{3}\-[0-9]{3}/g.test(regNum) || /[A-Z]{2}\s[0-9]{5}/g.test(regNum) || /[A-Z]{2}\-[0-9]{3}\-[0-9]{3}/g.test(regNum)){
-                //console.log('north')
                    if(regNum.length >8 && regNum.length <=10){
-                       // console.log('numbers')
                         regList.push(regNum)
                         regCount++
                         addedMessage = "Your registration number has been added"
                         return true
-                        //console.log("try")
                     } 
                     else{
                         addedMessage = "not enough characters more or less!"
@@ -70,8 +65,6 @@ function registrations(){
                 addedMessage = "does not match check the format!"
                 return false
             }
-
-            // console.log(regList)
             
         }
         else if(regList.includes(regNum)){
@@ -83,11 +76,6 @@ function registrations(){
     }
 
     function filterRegistration(radioCheck){
-
-        // capeArr = []
-        // stellArr =[]
-        // bellArr = []
-        // paarArr = []
 
         for(i=0; i<regList.length; i++){
             if(radioCheck == "cape-town"){
@@ -112,14 +100,8 @@ function registrations(){
             }
             if(radioCheck == "all"){
                 return regList
-                // if(regList[i].startsWith("CA")){
-                //     capeArr.push(regList[i])
-                // }
             }
-        }
-
-
-       
+        }   
 
     }
 
