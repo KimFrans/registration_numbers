@@ -1,15 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <link rel="stylesheet" href="registration_numbers.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Numbers</title>
+
+    <script type="text/x-template" class="templateReg">
+        {{#each reg}}
+            {{this}}
+        {{/each}}
+    </script>
+
 </head>
 <body>
 
-    <div class="header">
+    <div class="split left">
+        <div class="header">
+            <h1>Registration Numbers</h1>
+        </div>
+    
+        <div class="reg-name">
+            <h3>Please enter a registration number</h3>
+            <p>
+                Formats that are accepted :
+            </p>
+            <p>
+                CA 123-456
+            </p>
+            <p>
+                CY 123456
+            </p>
+            <p>
+                CJ-123-456
+            </p>
+        </div>
+    
+        <div class="errorMessage">
+            <span class="errorOutputMessage"></span>
+        </div>
+    
+        <div class="text-box">
+            <label for="reg_num">Registration Number: </label>
+                <input class="textNum" type="text" placeholder="enter a registration"/>
+                <!-- <span><label for="count">Count:<span class="counterValue"></span> </label></span> -->
+        </div>
+    
+        <div class="message">
+            <span class="outputMessage"></span>
+        </div>
+    
+        <div class="buttons">    
+            <button class="add" type="button" name="button" >Add</button>
+        
+            <!-- <button class="show" type="button" name="show-button" >Show</button> -->
+    
+            <button class="clear" type="button" name="clear-button" >Clear</button>
+    
+        </div>
+    
+        <div class="radio-buttons">
+            <p>Please select a town:</p>
+            <form>
+                <label class="radio-inline">
+                    <input class="radio-btn" type="radio" name="town" value="cape-town" checked>Cape Town
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-btn" type="radio" name="town" value="stellenbosch">Stellenbosch
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-btn" type="radio" name="town" value="bellville">Bellville
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-btn" type="radio" name="town" value="paarl">Paarl
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-btn" type="radio" name="town" value="all">All
+                </label>
+            </form>
+        </div>
+    
+        <div class="display-button">
+            <button class="show" type="button" name="show-button" >Show Registration</button>
+        </div>
+    
+        <div id="reg-display">
+            <ul id="regs">
+               
+            </ul>
+        </div>
+    </div>
+
+    <div class="split right">
+        <div class="header">
+            <h1>Registration Numbers</h1>
+        </div>
+    
+        <div class="reg-name">
+            <h3>Please enter a registration number</h3>
+            <p>
+                Formats that are accepted :
+            </p>
+            <p>
+                CA 123-456
+            </p>
+            <p>
+                CY 123456
+            </p>
+            <p>
+                CJ-123-456
+            </p>
+        </div>
+    
+        <div class="errorMessageTemp">
+            <span class="errorOutputMessageTemp"></span>
+        </div>
+    
+        <div class="text-boxTemp">
+            <label for="reg_num">Registration Number: </label>
+                <input class="textNumTemp" type="text" placeholder="enter a registration"/>
+        </div>
+    
+        <div class="messageTemp">
+            <span class="outputMessageTemp"></span>
+        </div>
+    
+        <div class="buttonsTemp">    
+            <button class="addTemplate" type="button" name="button" >Add</button>
+    
+            <button class="clearTemplate" type="button" name="clear-button" >Clear</button>
+    
+        </div>
+    
+        <div class="radio-buttonsTemp">
+            <p>Please select a town:</p>
+            <form>
+                <label class="radio-inline">
+                    <input class="radio-btnTemp" type="radio" name="town" value="cape-town" checked>Cape Town
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-btnTemp" type="radio" name="town" value="stellenbosch">Stellenbosch
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-btnTemp" type="radio" name="town" value="bellville">Bellville
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-btnTemp" type="radio" name="town" value="paarl">Paarl
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-btnTemp" type="radio" name="town" value="all">All
+                </label>
+            </form>
+        </div>
+    
+        <div class="display-button">
+            <button class="showTemp" type="button" name="show-button" >Show Registration</button>
+        </div>
+    
+        <div id="reg-displayTemp">
+            <ul id="regsTemp">
+               
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="header">
         <h1>Registration Numbers</h1>
     </div>
 
@@ -36,7 +193,6 @@
     <div class="text-box">
         <label for="reg_num">Registration Number: </label>
             <input class="textNum" type="text" placeholder="enter a registration"/>
-            <!-- <span><label for="count">Count:<span class="counterValue"></span> </label></span> -->
     </div>
 
     <div class="message">
@@ -45,8 +201,6 @@
 
     <div class="buttons">    
         <button class="add" type="button" name="button" >Add</button>
-    
-        <!-- <button class="show" type="button" name="show-button" >Show</button> -->
 
         <button class="clear" type="button" name="clear-button" >Clear</button>
 
@@ -71,20 +225,21 @@
                 <input class="radio-btn" type="radio" name="town" value="all">All
             </label>
         </form>
-    </div>
+    </div> -->
 
-    <div class="display-button">
+    <!-- <div class="display-button">
         <button class="show" type="button" name="show-button" >Show Registration</button>
-    </div>
+    </div> -->
 
-    <div id="reg-display">
+    <!-- <div id="reg-display">
         <ul id="regs">
            
         </ul>
-    </div>
+    </div> -->
 
     <script src="factory-function/registration_factory.js"></script>
     <script src="javascript/registration_numbers.js"></script>
+    <script src="javascript/template-reg.js"></script>
 
     
 </body>

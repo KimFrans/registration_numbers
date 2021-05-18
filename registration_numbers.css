@@ -35,7 +35,7 @@ body{
 }
 
 .radio-buttons{
-    margin-left: 12%;
+    margin-left: 5%;
 }
 
 .radio-buttons .radio-inline{
@@ -116,3 +116,98 @@ body{
     background-color: grey;
     font-size: 10px;
 } */
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-color: rgb(228, 190, 67);
+}
+  
+.right {
+    right: 0;
+    background-color: rgb(128, 224, 104);
+}
+
+.radio-buttons{
+    margin-left: 5%;
+}
+
+.radio-buttonsTemp .radio-inline{
+    padding-right: 5%;
+    font-size: 20px;
+    font-family: fantasy;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.buttonsTemp{
+    display: inline;
+}
+
+.buttonsTemp .addTemplate{
+    border-radius: 20px;
+    margin-left: 30%;
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+
+.buttonsTemp .addTemplate:hover{
+    background-color: red;
+    color: wheat;
+}
+
+.display-button .showTemp{
+    margin-top: 2%;
+    margin-left: 25%;
+    border-radius: 20px;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+.display-button .showTemp:hover{
+    background-color: red;
+    color: white;
+}
+
+.buttonsTemp .clearTemplate{
+    margin-left: 5%;
+    border-radius: 20px;
+    margin-right: 10%;
+    font-size: 20px;
+}
+
+.buttonsTemp .clearTemplate:hover{
+    background-color: red;
+    color: white;
+}
+
+.text-boxTemp{
+    margin-left: 30%;
+    font-size: 20px;
+}
+
+.regsTemp{
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    display: inline-block;
+    border-radius: 15px;
+    border-color: black;
+    border: solid black;
+    color: black;
+    background-color: yellow;
+    font-size: 20px;
+    /* list-style: none; */
+    margin-right: 2%;
+}
