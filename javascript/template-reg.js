@@ -206,9 +206,9 @@ function clearReg(){
     factTemplate.clearTheCountButton()
     var list = document.getElementById("regsTemp");
     list.innerHTML = ''
-    checkedRadio1.checked = false
-    message1.innerHTML = factoryFunc.values().cleared
+    checkedRadio2.checked = false
+    message1.innerHTML = factTemplate.values().cleared
     setTimeout(function(){ message1.innerHTML = "" }, 4000);
 }
-clear.addEventListener("click", clearReg)
+clear1.addEventListener("click", clearReg)
 

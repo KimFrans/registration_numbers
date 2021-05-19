@@ -196,7 +196,7 @@ body{
     font-size: 20px;
 }
 
-.regsTemp{
+/* #regsTemp{
     padding-top: 1.5%;
     padding-bottom: 1.5%;
     padding-right: 1.5%;
@@ -208,6 +208,35 @@ body{
     color: black;
     background-color: yellow;
     font-size: 20px;
-    /* list-style: none; */
+    list-style: none;
     margin-right: 2%;
+} */
+
+.displayReg{
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    display: inline-block;
+    border-radius: 15px;
+    border-color: black;
+    border: solid black;
+    color: black;
+    background-color: yellow;
+    font-size: 20px;
+    list-style: none;
+    margin-right: 2%;
+}
+
+.messageTemp {
+    margin-left: 30%;
+    padding-top: 1%;
+    color: rgb(9, 0, 128)
+}
+
+.errorMessageTemp{
+    margin-left: 35%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: red;
 }
