@@ -20,23 +20,24 @@ var templateSource = document.querySelector(".templateReg").innerHTML;
  // compile the template
 var userTemplate = Handlebars.compile(templateSource);
 
-// var localArray1 = []
+var localArray1 = []
 
-// if (localStorage['regNumberArray']){
-//     localArray1 = JSON.parse(localStorage['regNumberArray'])
-//     console.log(localArray1)
-// }
+if (localStorage['regNumberArray1']){
+    localArray1 = JSON.parse(localStorage['regNumberArray1'])
+    console.log(localArray1)
+}
 
-// factTemplate.setArray(localArray1)
+factTemplate.setArray(localArray1)
 
-// if(localArray1.length != 0){
-//     for(i=0; i<localArray1.length; i++){
-//         var nodeExample = document.createElement("li")
-//         var textNode = document.createTextNode(localArray1[i])
-//         nodeExample.appendChild(textNode)  
-//         document.getElementById("regs").appendChild(nodeExample)
-//     }
-// }
+if(localArray1.length != 0){
+    // for(i=0; i<localArray1.length; i++){
+    //     var nodeExample = document.createElement("li")
+    //     var textNode = document.createTextNode(localArray1[i])
+    //     nodeExample.appendChild(textNode)  
+    //     document.getElementById("regs").appendChild(nodeExample)
+    // }
+    tempDisplay.innerHTML = userTemplate({reg: localArray1})
+}
 
 
 function registrationTemplate(){
@@ -65,7 +66,7 @@ function registrationTemplate(){
             setTimeout(function(){ message1.innerHTML = "" }, 4000);
             
         }
-        // localStorage.setItem('regNumberArray', JSON.stringify(factoryFunc.getArr()))
+        localStorage.setItem('regNumberArray1', JSON.stringify(factTemplate.getArr()))
         // tempDisplay.innerHTML = userTemplate({reg: array1})
         message1.innerHTML = factTemplate.values().addMessage
         setTimeout(function(){ message1.innerHTML = "" }, 4000);
