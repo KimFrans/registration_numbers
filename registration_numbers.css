@@ -224,7 +224,7 @@ body{
     color: black;
     background-color: yellow;
     font-size: 20px;
-    list-style: none;
+    /* list-style: none; */
     margin-right: 2%;
 }
 

@@ -9,7 +9,8 @@ var message1 = document.querySelector(".messageTemp")
 var regDisplay1 = document.getElementById("reg-displayTemp")
 var tempDisplay = document.getElementById("regsTemp")
 var clear1 = document.querySelector(".clearTemplate")
-var checkedRadio2 = document.querySelector("input[name='town']:checked");
+var temp = document.querySelector(".displayReg")
+var checkedRadio2 = document.querySelector("input[name='townT']:checked");
 checkedRadio2.checked = false
 
 var factTemplate = registrations()
@@ -62,12 +63,14 @@ function registrationTemplate(){
             console.log(array1)
             // tempDisplay.innerHTML = userTemplate({reg: ["CA 123456", "CV 123456"]})
             tempDisplay.innerHTML = userTemplate({reg: array1})
+            // console.log("reprint")
             message1.innerHTML = factTemplate.values().addMessage
             setTimeout(function(){ message1.innerHTML = "" }, 4000);
             
         }
         localStorage.setItem('regNumberArray1', JSON.stringify(factTemplate.getArr()))
         // tempDisplay.innerHTML = userTemplate({reg: array1})
+        // console.log("reprint")
         message1.innerHTML = factTemplate.values().addMessage
         setTimeout(function(){ message1.innerHTML = "" }, 4000);
 
@@ -85,25 +88,33 @@ addButton1.addEventListener("click", registrationTemplate)
 
 function radioButtonsTemplate(){
 
-    if(checkedRadio1 != ''){
-        var checkedRadio2 = document.querySelector("input[name='town']:checked");
+    if(checkedRadio2 != ''){
+        var checkedRadio2 = document.querySelector("input[name='townT']:checked");
         factTemplate.filterRegistration(checkedRadio2.value)
         
         if(checkedRadio2.value === "cape-town"){
             var cape1 = factTemplate.getCape()
            
-            var list = document.getElementById("regsTemp");
-            list.innerHTML = ''
-
+            // tempDisplay.innerHTML = userTemplate({reg: ""})
+            tempDisplay.innerHTML = ""
+            // var list = document.getElementById("regsTemp");
+            // list.innerHTML = ''
+            
+            // tempDisplay.innerHTML = userTemplate({reg: factTemplate.getCape()})
+            // if (cape1.length == 0){
+            //     errorMessage1.innerHTML = "There are no registration numbers for this location"
+            //     setTimeout(function(){ errorMessage1.innerHTML = "" }, 4000);
+            // }
             if(cape1.length != 0){
-            //   for(i=0; i<cape1.length; i++){
-            //     var capeTown = document.createElement("li")
-            //     var capeRegNum = document.createTextNode(cape[i])
-            //     capeTown.appendChild(capeRegNum) 
+             //   for(i=0; i<cape1.length; i++){
+                //     var capeTown = document.createElement("li")
+                //     var capeRegNum = document.createTextNode(cape[i])
+                //     capeTown.appendChild(capeRegNum) 
 
-            //     }
+                //     }
             
                 // document.getElementById("regs").appendChild(capeTown)  
+                // regDisplay1.innerHTML = ""
                 tempDisplay.innerHTML = userTemplate({reg: cape1})
             }
             else{
@@ -117,7 +128,7 @@ function radioButtonsTemplate(){
            
             var list = document.getElementById("regsTemp");
             list.innerHTML = ''
-
+            tempDisplay.innerHTML = ""
             if(stell1.length != 0){
                 // for(i=0; i<stell.length; i++){
                 //     var stellTown = document.createElement("li")
@@ -127,6 +138,7 @@ function radioButtonsTemplate(){
                 // }
             
                 // document.getElementById("regs").appendChild(stellTown)
+                
                 tempDisplay.innerHTML = userTemplate({reg: stell1})
             }
             else{
@@ -150,6 +162,7 @@ function radioButtonsTemplate(){
                 // }
             
                 // document.getElementById("regs").appendChild(bellTown)
+                tempDisplay.innerHTML = ""
                 tempDisplay.innerHTML = userTemplate({reg: bell1})
             }
             else{
@@ -172,6 +185,7 @@ function radioButtonsTemplate(){
                 
                 // }
                 // document.getElementById("regs").appendChild(paarTown)
+                tempDisplay.innerHTML = ""
                 tempDisplay.innerHTML = userTemplate({reg: paar1})
             }
             else{
@@ -188,13 +202,14 @@ function radioButtonsTemplate(){
             var list = document.getElementById("regsTemp");
             list.innerHTML = ''
 
-            for(i=0; i<allReg1.length; i++){
+            // for(i=0; i<allReg1.length; i++){
                 // var allTown = document.createElement("li")
                 // var allRegNum = document.createTextNode(allReg[i])
                 // allTown.appendChild(allRegNum)  
                 // document.getElementById("regs").appendChild(allTown)
+                tempDisplay.innerHTML = ""
                 tempDisplay.innerHTML = userTemplate({reg: allReg1})
-            }
+            // }
             
         }
 

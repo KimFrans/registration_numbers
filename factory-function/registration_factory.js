@@ -76,7 +76,10 @@ function registrations(){
     }
 
     function filterRegistration(radioCheck){
-
+        capeArr = []
+        stellArr = []
+        bellArr = []
+        paarArr = []
         for(i=0; i<regList.length; i++){
             if(radioCheck == "cape-town"){
                 if(regList[i].startsWith("CA")){
